@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyBlog后台管理</title>
+
+    <!-- ZUI 标准版压缩后的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/zui/1.8.1/css/zui.min.css">
+    <!-- ZUI Javascript 依赖 jQuery -->
+    <script src="https://cdn.bootcss.com/zui/1.8.1/lib/jquery/jquery.js"></script>
+    <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/zui/1.8.1/js/zui.min.js"></script>
+
+    <style>
+        body{
+            background-image: url(memphis-colorful.png);
+        }
+        li{
+          list-style-type:none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="container" style="margin-top:20px;">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="https://www.hoehub.com/usr/themes/PureLoveForTypecho/images/logo-160x60.png" alt="" srcset="">
+                        </div>
+                        <div class="col-lg-5"></div>
+                        <div class="col-lg-3">
+                                <div class="input-group" style="margin-top:10px;">
+                                        <div class="input-control search-box search-box-circle has-icon-left has-icon-right search-example" id="searchboxExample">
+                                          <input id="inputSearchExample3" type="search" class="form-control search-input" placeholder="输入关键字搜索">
+                                          <label for="inputSearchExample3" class="input-control-icon-left search-icon"><i class="icon icon-search"></i></label>
+                                        </div>
+                                        <span class="input-group-btn">
+                                          <button class="btn btn-primary" type="button">搜索</button>
+                                        </span>
+                                      </div>
+                        </div>
+                    </div>
+                <nav class="navbar navbar-default" role="navigation" style="margin-top:7px;">
+                    <div class="container-fluid">
+                      <!-- 导航头部 -->
+                      <div class="navbar-header">
+                        <!-- 移动设备上的导航切换按钮 -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+                                <span class="sr-only">切换导航</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        <a class="navbar-brand" href="your/nice/url">MyBlog</a>
+                      </div>
+                      <!-- 导航项目 -->
+                      <div class="collapse navbar-collapse navbar-collapse-example">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="your/nice/url"><i class="icon icon-home">&nbsp;</i>首页</a></li>
+                            <li><a href="your/nice/url"><i class="icon icon-coffee">&nbsp;</i>Java</a></li>
+                            <li><a href="your/nice/url"><i class="icon icon-server">&nbsp;</i>VPS</a></li>
+                            <li><a href="your/nice/url"><i class="icon icon-html5">&nbsp;</i>前端</a></li>
+                            <li><a href="your/nice/url"><i class="icon icon-table">&nbsp;</i>数据库</a></li>
+                            
+                            </ul>
+                        <!-- 右侧的导航项目 -->
+                        <ul class="nav navbar-nav navbar-right">
+                                <li><a href="your/nice/url"><i class="icon icon-info">&nbsp;</i>关于</a></li>
+                                <li class="dropdown">
+                                  <a href="your/nice/url" class="dropdown-toggle" data-toggle="dropdown"><i class="icon icon-anchor">&nbsp;</i>探索 <b class="caret"></b></a>
+                                  <ul class="dropdown-menu" role="menu">
+                                    <li><a href="your/nice/url">敏捷开发</a></li>
+                                    <li><a href="your/nice/url">HTML5</a></li>
+                                    <li><a href="your/nice/url">Javascript</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="your/nice/url">探索宇宙</a></li>
+                                  </ul>
+                                </li> 
+                                <!-- <form class="navbar-form navbar-left" role="search">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="搜索">
+                                        </div>
+                                        <button type="submit" class="btn btn-default">搜索</button>
+                                      </form> -->
+                          
+                        </ul>
+                      </div><!-- END .navbar-collapse -->
+                    </div>
+                  </nav>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+      </div>  
+
+      <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                    <div id="myNiceCarousel" class="carousel slide" data-ride="carousel">
+                                            <!-- 圆点指示器 -->
+                                            <ol class="carousel-indicators">
+                                              <li data-target="#myNiceCarousel" data-slide-to="0" class="active"></li>
+                                              <li data-target="#myNiceCarousel" data-slide-to="1"></li>
+                                              <li data-target="#myNiceCarousel" data-slide-to="2"></li>
+                                            </ol>
+                                          
+                                            <!-- 轮播项目 -->
+                                            <div class="carousel-inner">
+                                              <div class="item active">
+                                                <img alt="First slide" src="http://zui.sexy/docs/img/slide1.jpg">
+                                                <div class="carousel-caption">
+                                                  <h3>我是第一张幻灯片</h3>
+                                                  <p>:)</p>
+                                                </div>
+                                              </div>
+                                              <div class="item">
+                                                <img alt="Second slide" src="http://zui.sexy/docs/img/slide2.jpg">
+                                                <div class="carousel-caption">
+                                                  <h3>我是第二张幻灯片</h3>
+                                                  <p>0.0</p>
+                                                </div>
+                                              </div>
+                                              <div class="item">
+                                                <img alt="Third slide" src="http://zui.sexy/docs/img/slide3.jpg">
+                                                <div class="carousel-caption">
+                                                  <h3>我是第三张幻灯片</h3>
+                                                  <p>最后一张咯~</p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          
+                                            <!-- 项目切换按钮 -->
+                                            <a class="left carousel-control" href="#myNiceCarousel" data-slide="prev">
+                                              <span class="icon icon-chevron-left"></span>
+                                            </a>
+                                            <a class="right carousel-control" href="#myNiceCarousel" data-slide="next">
+                                              <span class="icon icon-chevron-right"></span>
+                                            </a>
+                                          </div>
+                                          <div style="margin-top:10px;">
+                                            <div class="items items-hover">
+                                              <div class="item" style="background-color:#f5f5f5;border:1px solid #ddd; margin-top: 10px;">
+                                                <div style="margin:1px 6px 1px 6px;">
+                                                <div class="item-heading" >
+                                                  <div class="pull-right label label-primary">Java</div>
+                                                  <h2><a href="###">HTML5 发展历史</a></h2><hr>
+                                                </div>
+                                                <div class="item-content">
+                                                  <div class="media pull-left"><img src="https://ss1.bdstatic.com/5aAHeD3nKgcUp2HgoI7O1ygwehsv/media/ch1000/png/pct1.png" alt=""></div>
+                                                  <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML 5草案的前身名为Web Applications 1.0，是在2004年由WHATWG提出。2008年1月22日，第一份正式草案发布。WHATWG表示该规范是目前仍在进行的工作，仍须多年的努力。[8]目前Mozilla Firefox、Google Chrome、Opera、Safari（版本4以上）、Internet Explorer（版本9以上）已支持HTML5技术。</div>
+                                                </div>
+                                                <div class="item-footer">
+                                                  <a href="#" class="text-muted"><i class="icon-comments"></i> 243</a> &nbsp; <span class="text-muted">2013-11-11 16:14:37</span>
+                                                </div>
+                                              </div>
+                                              </div>
+                                              
+                                              <div class="item" style="background-color:#f5f5f5;border:1px solid #ddd;margin-top: 10px;">
+                                                <div style="margin:1px 6px 1px 6px;">
+                                                <div class="item-heading" >
+                                                  <div class="pull-right label label-primary">Java</div>
+                                                  <h2><a href="###">HTML5 发展历史</a></h2><hr>
+                                                </div>
+                                                <div class="item-content">
+                                                  <div class="media pull-left"><img src="https://ss1.bdstatic.com/5aAHeD3nKgcUp2HgoI7O1ygwehsv/media/ch1000/png/pct1.png" alt=""></div>
+                                                  <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML 5草案的前身名为Web Applications 1.0，是在2004年由WHATWG提出。2008年1月22日，第一份正式草案发布。WHATWG表示该规范是目前仍在进行的工作，仍须多年的努力。[8]目前Mozilla Firefox、Google Chrome、Opera、Safari（版本4以上）、Internet Explorer（版本9以上）已支持HTML5技术。</div>
+                                                </div>
+                                                <div class="item-footer">
+                                                  <a href="#" class="text-muted"><i class="icon-comments"></i> 243</a> &nbsp; <span class="text-muted">2013-11-11 16:14:37</span>
+                                                </div>
+                                              </div>
+                                              </div>
+
+                                              <div class="item" style="background-color:#f5f5f5;border:1px solid #ddd;margin-top: 10px;">
+                                                <div style="margin:1px 6px 1px 6px;">
+                                                <div class="item-heading" >
+                                                  <div class="pull-right label label-primary">Java</div>
+                                                  <h2><a href="###">HTML5 发展历史</a></h2><hr>
+                                                </div>
+                                                <div class="item-content">
+                                                  <div class="media pull-left"><img src="https://ss1.bdstatic.com/5aAHeD3nKgcUp2HgoI7O1ygwehsv/media/ch1000/png/pct1.png" alt=""></div>
+                                                  <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML 5草案的前身名为Web Applications 1.0，是在2004年由WHATWG提出。2008年1月22日，第一份正式草案发布。WHATWG表示该规范是目前仍在进行的工作，仍须多年的努力。[8]目前Mozilla Firefox、Google Chrome、Opera、Safari（版本4以上）、Internet Explorer（版本9以上）已支持HTML5技术。</div>
+                                                </div>
+                                                <div class="item-footer">
+                                                  <a href="#" class="text-muted"><i class="icon-comments"></i> 243</a> &nbsp; <span class="text-muted">2013-11-11 16:14:37</span>
+                                                </div>
+                                              </div>
+                                              </div>
+                                            </div>
+                                             
+                                              
+                                          </div>
+                                          
+                            </div>
+                            <div class="col-lg-4">
+                                    <div id="block2" class="panel panel-block block-article-hotArticle"> 
+                                            <div class="panel-heading"> 
+                                                <strong><i class="icon panel-icon icon-bar-chart"></i> 网站统计</strong> 
+                                            </div> 
+                                            <div class="panel-body">
+                                                    <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                                        <li style="list-style-type:none;">文章总数：</li>  
+                                                                        <li style="list-style-type:none;">评论总数：</li>  
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                                        <li style="list-style-type:none;">文章标签：</li>  
+                                                                        <li style="list-style-type:none;">访问量：</li>  
+                                                                </div>      
+                                                            </div> 
+                                                    </div>
+                                            </div>
+                                    </div>
+                                    <div class="panel"> 
+                                            <table class="table table-hover table-striped"> 
+                                              <thead> 
+                                                <tr class="text-center hidden-xxxs"> 
+                                                  <th>
+                                                    <strong>&nbsp;<i class="icon panel-icon icon-sort-by-attributes-alt"></i> 最热文章</strong> 
+                                                  </th> 
+                                                </tr> 
+                                              </thead> 
+                                              <tbody> 
+                                                <tr class="text-center"> 
+                                                  <td class="text-left"> 
+                                                    <i class="icon-comment-alt icon-large text-muted"> </i> 
+                                                    <span data-ve="thread" id="thread167">[前端讨论] 
+                                                    <a href="/thread/167.html">如何变化主题，把less 打成css</a></span> 
+                                                  </td> 
+                                                </tr> 
+                                                <tr class="text-center"> 
+                                                        <td class="text-left"> 
+                                                          <i class="icon-comment-alt icon-large text-muted"> </i> 
+                                                          <span data-ve="thread" id="thread167">[前端讨论] 
+                                                          <a href="/thread/167.html">如何变化主题，把less 打成css</a></span> 
+                                                        </td> 
+                                                      </tr>
+                                              </tbody> 
+                                            </table> 
+                                          </div>
+                                          <div class="panel"> 
+                                                <table class="table table-hover table-striped"> 
+                                                  <thead> 
+                                                    <tr class="text-center hidden-xxxs"> 
+                                                      <th>
+                                                        <strong>&nbsp;<i class="icon panel-icon icon-sort-by-order"></i> 最新文章</strong> 
+                                                      </th> 
+                                                    </tr> 
+                                                  </thead> 
+                                                  <tbody> 
+                                                    <tr class="text-center"> 
+                                                      <td class="text-left"> 
+                                                        <i class="icon-comment-alt icon-large text-muted"> </i> 
+                                                        <span data-ve="thread" id="thread167">[前端讨论] 
+                                                        <a href="/thread/167.html">如何变化主题，把less 打成css</a></span> 
+                                                      </td> 
+                                                    </tr> 
+                                                    <tr class="text-center"> 
+                                                            <td class="text-left"> 
+                                                              <i class="icon-comment-alt icon-large text-muted"> </i> 
+                                                              <span data-ve="thread" id="thread167">[前端讨论] 
+                                                              <a href="/thread/167.html">如何变化主题，把less 打成css</a></span> 
+                                                            </td> 
+                                                          </tr>
+                                                  </tbody> 
+                                                </table> 
+                                              </div>
+                                    <a class="card" href="###">
+                                            <img src="docs/img/img2.jpg" alt="">
+                                            <div class="card-heading"><strong>良辰美景</strong></div>
+                                            <div class="card-content text-muted">良辰美景奈何天，赏心乐事谁家院。</div>
+                                            <div class="card-actions">
+                                              <button type="button" class="btn btn-danger"><i class="icon-heart"></i> 喜欢</button>
+                                              <div class="pull-right text-danger"><i class="icon-heart-empty"></i> 520 人喜欢</div>
+                                            </div>
+                                          </a>
+                            </div>
+                    </div>
+                <div class="col-lg-2"></div>
+            </div>
+          </div> 
+          </div>
+          <!-- 底部 -->
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                  底部信息
+                </div>
+                <div class="col-lg-4">2</div>
+                <div class="col-lg-4">3</div>
+              </div>
+          </div>
+          
+</body>
+</html>
+
+
+

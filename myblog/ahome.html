@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyBlog后台管理</title>
+
+    <!-- ZUI 标准版压缩后的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/zui/1.8.1/css/zui.min.css">
+    <!-- ZUI Javascript 依赖 jQuery -->
+    <script src="https://cdn.bootcss.com/zui/1.8.1/lib/jquery/jquery.js"></script>
+    <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/zui/1.8.1/js/zui.min.js"></script>
+
+    <style>
+        body{
+            background-image: url(memphis-colorful.png);
+        }
+        li{
+          list-style-type:none; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <!-- 导航头部 -->
+          <div class="navbar-header">
+            <!-- 移动设备上的导航切换按钮 -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        <a class="navbar-brand" href="your/nice/url">MyBlog</a>
+          </div>
+          <!-- 导航项目 -->
+          <div class="collapse navbar-collapse navbar-collapse-example">
+              
+            <!-- 右侧的导航项目 -->
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="your/nice/url">后台首页</a></li>
+              <li><a href="your/nice/url">主题配置</a></li>
+              <li><a href="your/nice/url">网站设置</a></li>
+              <li><a href="your/nice/url">广告设置</a></li>
+              <li><a href="your/nice/url">蜘蛛来访</a></li>
+              <li><a href="index.html">去前台</a></li>
+              <li class="dropdown">
+                <a href="your/nice/url" class="dropdown-toggle" data-toggle="dropdown">个人中心 <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="your/nice/url"><i class="icon icon-info-sign"></i> 个人信息</a></li>
+                  <li><a href="your/nice/url"><i class="icon icon-key"></i> 密码修改</a></li>
+                  <li class="divider"></li>
+                  <li><a href="your/nice/url"><i class="icon icon-signin"></i> 退出登录</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- END .navbar-collapse -->
+        </div>
+      </nav>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-1 col-md-3 col-sm-3 col-xs-4">
+            <nav class="menu" data-ride="menu" style="background-color:white;">
+              <ul id="treeMenu" class="tree tree-menu" data-ride="tree">
+                <li>
+                  <a href="#"><i class="icon icon-newspaper-o"></i>文章管理</a>
+                  <ul>
+                    <li><a href="aedit.html"><i class="icon icon-pencil"></i>新建文章</a></li>
+                    <li><a href="aarticle.html"><i class="icon icon-list-alt"></i>文章列表</a></li>
+                  </ul>
+                </li>
+                <li><a href="acategory.html"><i class="icon icon-align-justify"></i>分类管理</a></li>
+                <li><a href="atag.html"><i class="icon icon-tags"></i>标签管理</a></li>
+                <li><a href="acomment.html"><i class="icon icon-quote-left"></i>评论管理</a></li>
+                <li>
+                  <a href="#"><i class="icon icon-group"></i>用户管理</a>
+                  <ul>
+                    <li><a href="#"><i class="icon icon-key"></i>新建用户</a></li>
+                    <li><a href="amember.html"><i class="icon icon-group"></i>用户列表</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="icon icon-dashboard"></i>模块管理</a></li>
+                <li><a href="#"><i class="icon icon-rocket"></i>插件管理</a></li>
+                <li><a href="aupload.html"><i class="icon icon-long-arrow-up"></i>更新记录</a></li>
+                <li><a href="ainfo.html"><i class="icon icon-info"></i>关于系统</a></li>
+              </ul>
+            </nav>
+          </div>
+            <div class="col-lg-11 col-md-9 col-sm-9 col-xs-8">
+                  <!-- 面包屑 -->
+                  <ol class="breadcrumb">
+                    <small>当前位置：</small>
+                    <li><i class="icon icon-home"></i> 首页</li>
+                  </ol>
+                  <span class="icon icon-home icon-2x"> 网站摘要</span><hr>
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <div id="block2" class="panel panel-block block-article-hotArticle"> 
+                                <div class="panel-heading"> 
+                                    <strong><i class="icon panel-icon icon-bar-chart"></i> 网站信息</strong> 
+                                </div> 
+                                <table class="table table-hover table-responsive table-bordered class">
+                                    <tbody>
+                                      <tr>
+                                        <td><i class="icon icon-user"></i> 当前用户</td>
+                                        <td>XXX</td>
+                                        <td><i class="icon icon-info"></i> 当前版本</td>
+                                        <td>XXX</td>
+                                      </tr>
+                                      <tr>
+                                        <td><i class="icon icon-list-alt"></i> 文章总数</td>
+                                        <td>xxxx</td>
+                                        <td><i class="icon icon-eye-open"></i> 浏览总数</td>
+                                        <td>xxxx</td>
+                                      </tr>
+                                      <tr>
+                                        <td><i class="icon icon-tags"></i> 标签总数</td>
+                                        <td>xxx</td>
+                                        <td><i class="icon icon-group"></i> 用户总数</td>
+                                        <td>xxx</td>
+                                      </tr>
+                                      <tr>
+                                        <td><i class="icon icon-paint-brush"></i> 当前主题</td>
+                                        <td>xxx</td>
+                                        <td><i class="icon icon-linux"></i> 系统环境</td>
+                                        <td>xxx</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-heading"><strong><i class="icon icon-comments"></i> 最新消息</strong></div>
+                                <ul class="list-group">
+                                  <li class="list-group-item"><a href="">2019-1-1</a></li>
+                                  <li class="list-group-item"><a href="">dadasdasasddasdsa</a></li>
+                                  <li class="list-group-item"><a href="">sfdasfsadfsd</a></li>
+                                  <li class="list-group-item"><a href="">dsadsadsaa</a></li>
+                                  <li class="list-group-item"><a href="">dsadsaads</a></li>
+                                </ul>
+                              </div>
+                          </div>
+                         
+                      </div>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+          
+</body>
+</html>
+
+
+
